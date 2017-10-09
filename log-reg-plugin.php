@@ -4,7 +4,7 @@
   Plugin Name: Login Registration Plugin
   Description: Login, Registration forms, updates user rating based on number of posts.
   Version: 1.0
-  Author: Erdniev Kirsan	
+  Author: Wangohan	
  */
 
 function registration_function() {
