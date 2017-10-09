@@ -60,6 +60,10 @@ function registration_function() {
 function registration_form( $username, $password, $email, $website, $first_name, $last_name, $nickname, $bio ) {
     echo '
     <style>
+	@font-face {
+    font-family: PTSans-Regular; 
+    src: url(../fonts/PTSans-Regular.ttf);
+	}
 	div {
 		margin-bottom:2px;
 	}
@@ -70,7 +74,8 @@ function registration_form( $username, $password, $email, $website, $first_name,
     width: 400px;
     height: 40px;
     font-size: 18px;
-    text-align: center;
+	padding-left: 10px;
+    text-align: left;
     margin: 15px;
     border: solid 2px rgb(240, 240, 240);
     background-color: rgb(255, 255, 255);
@@ -91,17 +96,19 @@ function registration_form( $username, $password, $email, $website, $first_name,
     background-image: -moz-linear-gradient( 90deg, rgb(198,43,43) 0%, rgb(247,90,90) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(198,43,43) 0%, rgb(247,90,90) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(198,43,43) 0%, rgb(247,90,90) 100%);
+	border: solid 2px rgb(170,43,43);
     box-shadow: 0 2px 8px rgba(166, 17, 17, 0.4);
     border-bottom: solid 2px #a61111;
     cursor: pointer;
     text-align: center;
-    padding: 12px 0px 0px 20px;
+    padding: 12px 0px 10px 12px;
     margin-top: 15px;
     width: 266px;
     line-height: 1.2;
     height: 42px;
     color: #fff;
     font-size: 16px;
+	font-family: PTSans-Regular;
 	}
 	.button_register:hover {
     background-image: -moz-linear-gradient( 90deg, rgb(193, 36, 36) 0%, rgb(255, 0, 0) 100%);
@@ -152,7 +159,7 @@ function registration_form( $username, $password, $email, $website, $first_name,
 	<label for="bio">О себе</label><br>
 	<textarea name="bio">' . (isset($_POST['bio']) ? $bio : null) . '</textarea>
 	</div>
-	<div class="button_register  bth_puls:hover"><input type="submit" name="submit" value="Регистрация"/></div>
+	<button class="button_register  bth_puls:hover" onclick="submit" type="submit" name="submit" value="Регистрация">РЕГИСТРАЦИЯ</button>
 	</form>
 	';
 }
